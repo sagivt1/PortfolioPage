@@ -1,0 +1,49 @@
+# Dependency directories
+node_modules/
+
+# Build outputs
+dist/
+.angular/
+
+# IDEs and Editors
+.vscode/
+.idea/
+.history/
+*.swp
+*.swo
+
+# AI Agents and Tools
+.gemini/
+.cline/
+.cursor/
+.roo/
+.anthropic/
+
+# Version control
+.git/
+.gitignore
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables and sensitive files
+.env
+.env.*
+.npmrc
+.yarnrc
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker files (not needed inside the image)
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentation
+README.md
+LICENSE

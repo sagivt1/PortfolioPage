@@ -42,3 +42,29 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# AI Tools & Agents
+.gemini/
+GEMINI.md
+CLOUD.md
+.cursor/
+.cursorrules
+.cursorignore
+Cursor.toml
+.windsurfrules
+.clinerules
+.cline_mcp_settings.json
+.aider*
+.aider.conf.yml
+.aider.chat.history.md
+.aider.input.history
+.roovrules
+.codeium/
+.cody/
+.continue/
+.copilot/
+.copilotignore
+.tabnine/
+
+# Explicitly allow the universal skill file (just in case)
+!portfolio-export-skill.md
