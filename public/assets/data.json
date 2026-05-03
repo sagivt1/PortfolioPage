@@ -1,0 +1,62 @@
+{
+  "personalInfo": {
+    "fullName": "Test User",
+    "email": "test@example.com",
+    "title": "Full Stack Developer | Cloud Architect | Open Source Contributor",
+    "picture": "assets/profile.png",
+    "linkedin": "https://linkedin.com/in/testuser",
+    "github": "https://github.com/testuser"
+  },
+  "projects": [
+    {
+      "projectName": "EcoTrack",
+      "tools": ["React", "Firebase", "TailwindCSS", "Chart.js"],
+      "description": "A comprehensive sustainability platform that helps users monitor and reduce their carbon footprint. It features real-time data visualization of energy consumption, automated lifestyle tips powered by AI, and a community-driven marketplace for eco-friendly products.",
+      "featured": true,
+      "photos": ["assets/screenshot/EcoTrack01.png"],
+      "githubLink": "https://github.com/testuser/ecotrack",
+      "liveLink": "https://ecotrack-demo.com"
+    },
+    {
+      "projectName": "DevConnect",
+      "tools": ["Next.js", "GraphQL", "PostgreSQL", "Prisma"],
+      "description": "A specialized social network for software engineers to share code snippets, collaborate on side projects, and discover job opportunities. Includes a custom-built real-time chat system and an integrated IDE-like code editor for collaborative debugging.",
+      "featured": true,
+      "photos": ["assets/screenshot/DevConnect01.png", "assets/screenshot/DevConnect02.png"],
+      "githubLink": "https://github.com/testuser/devconnect",
+      "liveLink": "https://dev-connect.io"
+    },
+    {
+      "projectName": "ByteSized",
+      "tools": ["Vue.js", "Express.js", "MongoDB", "Redis"],
+      "description": "An intelligent meal planning and recipe management application. ByteSized uses machine learning to suggest recipes based on your dietary preferences and available pantry items, effectively reducing food waste and simplifying grocery shopping.",
+      "featured": true,
+      "photos": [
+        "assets/screenshot/ByteSized01.png",
+        "assets/screenshot/ByteSized02.png",
+        "assets/screenshot/ByteSized03.png",
+        "assets/screenshot/ByteSized04.png"
+      ],
+      "githubLink": "https://github.com/testuser/bytesized",
+      "liveLink": ""
+    },
+    {
+      "projectName": "PeakPulse",
+      "tools": ["Python", "Django", "D3.js", "Docker"],
+      "description": "A performance-focused fitness dashboard for professional athletes. It integrates with wearable IoT devices to track biometric data in real-time, providing advanced analytics on recovery times, heart rate variability, and peak performance windows.",
+      "featured": false,
+      "photos": ["assets/screenshot/PeakPulse01.png"],
+      "githubLink": "https://github.com/testuser/peakpulse",
+      "liveLink": ""
+    },
+    {
+      "projectName": "SecureVault",
+      "tools": ["Go", "Rust", "WebAssembly", "SQLite"],
+      "description": "A zero-knowledge password manager and file encryption tool. Built with a focus on maximum security and cross-platform compatibility, it utilizes military-grade AES-256 encryption and biometric authentication to keep your sensitive data safe.",
+      "featured": false,
+      "photos": ["assets/screenshot/SecureVault01.png"],
+      "githubLink": "https://github.com/testuser/securevault",
+      "liveLink": ""
+    }
+  ]
+}

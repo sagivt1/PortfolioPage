@@ -1,1 +1,77 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global Theme Variables */
+:root {
+  /* Default Light Mode */
+  --primary-color: #3b82f6;
+  --bg-color: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --text-description: #4b5563;
+  --border-color: #e5e7eb;
+  --tag-bg: #eff6ff;
+  --tag-text: #1e40af;
+  --github-bg: #1f2937;
+  --github-text: #ffffff;
+}
+
+/* Auto Dark Mode (System Preference) */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light-mode) {
+    --bg-color: #111827;
+    --card-bg: #1f2937;
+    --text-main: #f9fafb;
+    --text-muted: #9ca3af;
+    --text-description: #d1d5db;
+    --border-color: #374151;
+    --tag-bg: #1e3a8a;
+    --tag-text: #bfdbfe;
+    --github-bg: #374151;
+    --github-text: #ffffff;
+  }
+}
+
+/* Manual Dark Mode Override */
+:root.dark-mode {
+  --bg-color: #111827;
+  --card-bg: #1f2937;
+  --text-main: #f9fafb;
+  --text-muted: #9ca3af;
+  --text-description: #d1d5db;
+  --border-color: #374151;
+  --tag-bg: #1e3a8a;
+  --tag-text: #bfdbfe;
+  --github-bg: #374151;
+  --github-text: #ffffff;
+}
+
+/* Manual Light Mode Override */
+:root.light-mode {
+  --bg-color: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --text-description: #4b5563;
+  --border-color: #e5e7eb;
+  --tag-bg: #eff6ff;
+  --tag-text: #1e40af;
+  --github-bg: #1f2937;
+  --github-text: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}

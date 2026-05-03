@@ -54,6 +54,29 @@ ng e2e
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
+## Updating Portfolio Content
+
+Your portfolio content is managed in `public/assets/data.json`. All personal information fields are mandatory; the application will not start if any are missing.
+
+### Extracting Project Data
+
+To automatically generate the JSON for a new project from its repository, you can use the custom **Portfolio Project Extractor** skill.
+
+**Prompt Template to use with Gemini CLI:**
+
+> "Please analyze this codebase and generate the portfolio project JSON by following the instructions in `portfolio-export-skill.md`.
+>
+> **Context:**
+>
+> - **Primary Focus:** Highlight these tools/frameworks: [e.g., Python, C++]
+> - **Supporting Tech:** Still include other important technologies found (e.g., Docker, SQL) to provide a complete overview of the project.
+> - **My specific contribution:** [e.g., Developed the backend API / Implemented the UI]
+> - **Featured status:** [Yes/No]
+>
+> Output ONLY the raw JSON."
+
+Once you have the JSON, append it to the `projects` array in `public/assets/data.json`.
+
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

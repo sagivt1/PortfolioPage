@@ -3,11 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "prestart": "node validate-data.js",
     "start": "ng serve",
+    "prebuild": "node validate-data.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "lint": "prettier --check ."
   },
   "private": true,
   "packageManager": "npm@10.9.7",
