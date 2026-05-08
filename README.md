@@ -68,9 +68,9 @@ To automatically generate the JSON for a new project from its repository, you ca
 >
 > **Context:**
 >
-> - **Primary Focus:** Highlight these tools/frameworks: [e.g., Python, C++]
-> - **Supporting Tech:** Still include other important technologies found (e.g., Docker, SQL) to provide a complete overview of the project.
-> - **My specific contribution:** [e.g., Developed the backend API / Implemented the UI]
+> - **Role:** [e.g., Lead Developer, Backend Contributor, UI/UX Designer]
+> - **Infrastructure:** [e.g., Deployed on DigitalOcean, uses AWS S3, CI/CD via GitHub Actions]
+> - **Key Highlights:** [e.g., Focus on React and TypeScript as the most relevant tools]
 > - **Featured status:** [Yes/No]
 >
 > Output ONLY the raw JSON."

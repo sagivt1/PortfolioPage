@@ -13,8 +13,15 @@ export interface PersonalInfo {
 
 export interface Project {
   projectName: string;
-  tools: string[];
+  role: string;
+  tools: {
+    languages: string[];
+    frameworks: string[];
+    databases: string[];
+    infrastructure: string[];
+  };
   description: string;
+  highlights: string[];
   photos: string[];
   githubLink: string;
   liveLink: string;
@@ -65,6 +72,7 @@ export class DataService {
       data.projects = data.projects.filter((project, index) => {
         const requiredProjectFields: (keyof Project)[] = [
           'projectName',
+          'role',
           'description',
           'githubLink',
         ];
@@ -73,16 +81,25 @@ export class DataService {
           const value = project[field];
           return typeof value === 'string' && value.trim() !== '';
         });
+const hasFeatured = project.featured !== undefined && project.featured !== null;
 
-        const hasFeatured = project.featured !== undefined && project.featured !== null;
-        const hasTools = project.tools && Array.isArray(project.tools) && project.tools.length > 0;
+const hasHighlights = Array.isArray(project.highlights);
 
-        if (!hasRequiredStrings || !hasFeatured || !hasTools) {
-          console.warn(
-            `Project at index ${index} ("${project.projectName || 'Unknown'}") was skipped due to missing required fields (strings, featured status, or tools).`,
-          );
-          return false;
-        }
+const tools = project.tools;
+const hasTools = tools && 
+  typeof tools === 'object' && 
+  !Array.isArray(tools) &&
+  Array.isArray(tools.languages) &&
+  Array.isArray(tools.frameworks) &&
+  Array.isArray(tools.databases) &&
+  Array.isArray(tools.infrastructure);
+
+if (!hasRequiredStrings || !hasFeatured || !hasTools || !hasHighlights) {
+  console.warn(
+    `Project at index ${index} ("${project.projectName || 'Unknown'}") was skipped due to missing required fields (strings, featured status, tools, or highlights).`,
+  );
+  return false;
+}
 
         return true;
       });

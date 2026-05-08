@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, OnDestroy, signal } from '@angular/core';
+import { Component, inject, OnInit, OnDestroy, signal, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { DataService, PortfolioData } from './services/data';
 import { ThemeService } from './services/theme';
@@ -17,7 +17,22 @@ export class App implements OnInit, OnDestroy {
 
   portfolioData = signal<PortfolioData | null>(null);
   selectedPhotos = signal<Record<string, string>>({});
+  modalImage = signal<string | null>(null);
+  currentModalProject = signal<string | null>(null);
   error = signal<string | null>(null);
+
+  @HostListener('window:keydown', ['$event'])
+  handleKeyDown(event: KeyboardEvent) {
+    if (!this.modalImage()) return;
+
+    if (event.key === 'ArrowRight') {
+      this.nextImage();
+    } else if (event.key === 'ArrowLeft') {
+      this.prevImage();
+    } else if (event.key === 'Escape') {
+      this.closeModal();
+    }
+  }
 
   private rotationIntervals: Record<string, any> = {};
 
@@ -71,6 +86,50 @@ export class App implements OnInit, OnDestroy {
       ...current,
       [projectName]: photo,
     }));
+  }
+
+  openModal(projectName: string, image: string) {
+    this.currentModalProject.set(projectName);
+    this.modalImage.set(image);
+    // Disable scrolling on body when modal is open
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeModal() {
+    this.modalImage.set(null);
+    this.currentModalProject.set(null);
+    // Re-enable scrolling
+    document.body.style.overflow = '';
+  }
+
+  nextImage(event?: Event) {
+    if (event) event.stopPropagation();
+    const projectName = this.currentModalProject();
+    const currentImg = this.modalImage();
+    const data = this.portfolioData();
+    if (!projectName || !currentImg || !data) return;
+
+    const project = data.projects.find((p) => p.projectName === projectName);
+    if (!project || !project.photos) return;
+
+    const currentIndex = project.photos.indexOf(currentImg);
+    const nextIndex = (currentIndex + 1) % project.photos.length;
+    this.modalImage.set(project.photos[nextIndex]);
+  }
+
+  prevImage(event?: Event) {
+    if (event) event.stopPropagation();
+    const projectName = this.currentModalProject();
+    const currentImg = this.modalImage();
+    const data = this.portfolioData();
+    if (!projectName || !currentImg || !data) return;
+
+    const project = data.projects.find((p) => p.projectName === projectName);
+    if (!project || !project.photos) return;
+
+    const currentIndex = project.photos.indexOf(currentImg);
+    const prevIndex = (currentIndex - 1 + project.photos.length) % project.photos.length;
+    this.modalImage.set(project.photos[prevIndex]);
   }
 
   ngOnDestroy() {

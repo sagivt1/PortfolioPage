@@ -10,7 +10,14 @@
   "projects": [
     {
       "projectName": "EcoTrack",
-      "tools": ["React", "Firebase", "TailwindCSS", "Chart.js"],
+      "role": "Lead Full Stack Developer",
+      "highlights": ["React", "Firebase"],
+      "tools": {
+        "languages": ["JavaScript", "CSS"],
+        "frameworks": ["React", "TailwindCSS", "Chart.js"],
+        "databases": ["Firebase"],
+        "infrastructure": ["Firebase Hosting"]
+      },
       "description": "A comprehensive sustainability platform that helps users monitor and reduce their carbon footprint. It features real-time data visualization of energy consumption, automated lifestyle tips powered by AI, and a community-driven marketplace for eco-friendly products.",
       "featured": true,
       "photos": ["assets/screenshot/EcoTrack01.png"],
@@ -19,7 +26,14 @@
     },
     {
       "projectName": "DevConnect",
-      "tools": ["Next.js", "GraphQL", "PostgreSQL", "Prisma"],
+      "role": "Lead Architect & Backend Developer",
+      "highlights": ["Next.js", "PostgreSQL", "Prisma", "Docker", "Kubernetes"],
+      "tools": {
+        "languages": ["TypeScript", "GraphQL", "Rust", "Go", "Python", "Bash"],
+        "frameworks": ["Next.js", "Prisma", "Express", "FastAPI", "Apollo Server", "Redux Toolkit", "Framer Motion", "Jest", "Cypress"],
+        "databases": ["PostgreSQL", "Redis", "Elasticsearch", "MongoDB", "Neo4j"],
+        "infrastructure": ["Docker", "Kubernetes", "AWS (EC2, S3, RDS)", "Vercel", "GitHub Actions", "Terraform", "Nginx", "Prometheus", "Grafana"]
+      },
       "description": "A specialized social network for software engineers to share code snippets, collaborate on side projects, and discover job opportunities. Includes a custom-built real-time chat system and an integrated IDE-like code editor for collaborative debugging.",
       "featured": true,
       "photos": ["assets/screenshot/DevConnect01.png", "assets/screenshot/DevConnect02.png"],
@@ -28,7 +42,14 @@
     },
     {
       "projectName": "ByteSized",
-      "tools": ["Vue.js", "Express.js", "MongoDB", "Redis"],
+      "role": "Full Stack Developer",
+      "highlights": ["Vue.js", "MongoDB"],
+      "tools": {
+        "languages": ["JavaScript"],
+        "frameworks": ["Vue.js", "Express.js"],
+        "databases": ["MongoDB", "Redis"],
+        "infrastructure": ["Nginx"]
+      },
       "description": "An intelligent meal planning and recipe management application. ByteSized uses machine learning to suggest recipes based on your dietary preferences and available pantry items, effectively reducing food waste and simplifying grocery shopping.",
       "featured": true,
       "photos": [
@@ -42,7 +63,14 @@
     },
     {
       "projectName": "PeakPulse",
-      "tools": ["Python", "Django", "D3.js", "Docker"],
+      "role": "Lead Developer",
+      "highlights": ["Python", "Django", "D3.js"],
+      "tools": {
+        "languages": ["Python", "JavaScript"],
+        "frameworks": ["Django", "D3.js"],
+        "databases": ["PostgreSQL"],
+        "infrastructure": ["Docker"]
+      },
       "description": "A performance-focused fitness dashboard for professional athletes. It integrates with wearable IoT devices to track biometric data in real-time, providing advanced analytics on recovery times, heart rate variability, and peak performance windows.",
       "featured": false,
       "photos": ["assets/screenshot/PeakPulse01.png"],
@@ -51,7 +79,14 @@
     },
     {
       "projectName": "SecureVault",
-      "tools": ["Go", "Rust", "WebAssembly", "SQLite"],
+      "role": "Security Researcher",
+      "highlights": ["Go", "Rust"],
+      "tools": {
+        "languages": ["Go", "Rust", "WebAssembly"],
+        "frameworks": [],
+        "databases": ["SQLite"],
+        "infrastructure": []
+      },
       "description": "A zero-knowledge password manager and file encryption tool. Built with a focus on maximum security and cross-platform compatibility, it utilizes military-grade AES-256 encryption and biometric authentication to keep your sensitive data safe.",
       "featured": false,
       "photos": ["assets/screenshot/SecureVault01.png"],

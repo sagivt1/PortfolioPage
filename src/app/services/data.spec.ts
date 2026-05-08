@@ -20,10 +20,17 @@ describe('DataService', () => {
     projects: [
       {
         projectName: 'Test Project',
+        role: 'Developer',
         description: 'A mock project for testing purposes.',
         githubLink: 'https://github.com/testuser/test-project',
         featured: true,
-        tools: ['Tool1', 'Tool2'],
+        tools: {
+          languages: ['TypeScript'],
+          frameworks: ['Angular'],
+          databases: [],
+          infrastructure: [],
+        },
+        highlights: ['Angular'],
         photos: [],
         liveLink: '',
       },
@@ -57,17 +64,24 @@ describe('DataService', () => {
     expect(data).toEqual(mockData);
   });
 
-  it('should filter out projects with missing tools', async () => {
+  it('should filter out projects with invalid tools structure', async () => {
     const invalidData = {
       ...mockData,
       projects: [
-        { ...mockData.projects[0], tools: [] }, // Should be filtered (empty array)
+        { ...mockData.projects[0], tools: [] }, // Should be filtered (wrong type, should be object)
         {
           projectName: 'Valid Project',
+          role: 'Contributor',
           description: 'Valid Desc',
           githubLink: 'Valid Link',
           featured: true,
-          tools: ['Angular'],
+          tools: {
+            languages: ['Angular'],
+            frameworks: [],
+            databases: [],
+            infrastructure: [],
+          },
+          highlights: [],
           photos: [],
           liveLink: '',
         }, // Should stay
@@ -81,7 +95,7 @@ describe('DataService', () => {
     const data = await dataPromise;
     expect(data.projects.length).toBe(1);
     expect(data.projects[0].projectName).toBe('Valid Project');
-    expect(data.projects[0].tools).toEqual(['Angular']);
+    expect(data.projects[0].tools.languages).toEqual(['Angular']);
   });
 
   it('should throw error if fullName is missing', async () => {

@@ -40,19 +40,28 @@ try {
 
   const validProjects = [];
   data.projects.forEach((project, index) => {
-    const requiredProjectFields = ['projectName', 'description', 'githubLink'];
+    const requiredProjectFields = ['projectName', 'role', 'description', 'githubLink'];
     const missingProjectFields = requiredProjectFields.filter(
       (field) =>
         !project[field] || (typeof project[field] === 'string' && project[field].trim() === ''),
     );
 
     const hasFeatured = project.featured !== undefined && project.featured !== null;
-    const hasTools = project.tools && Array.isArray(project.tools) && project.tools.length > 0;
+    const hasHighlights = Array.isArray(project.highlights);
+    
+    const tools = project.tools;
+    const hasTools = tools && 
+      typeof tools === 'object' && 
+      !Array.isArray(tools) &&
+      Array.isArray(tools.languages) &&
+      Array.isArray(tools.frameworks) &&
+      Array.isArray(tools.databases) &&
+      Array.isArray(tools.infrastructure);
 
-    if (missingProjectFields.length > 0 || !hasFeatured || !hasTools) {
+    if (missingProjectFields.length > 0 || !hasFeatured || !hasTools || !hasHighlights) {
       console.warn(
         '\x1b[33m%s\x1b[0m',
-        `WARNING: Project at index ${index} ("${project.projectName || 'Unknown'}") is missing required fields (strings, featured, or tools) and will be hidden.`,
+        `WARNING: Project at index ${index} ("${project.projectName || 'Unknown'}") is missing required fields (strings, featured, or categorized tools) and will be hidden.`,
       );
     } else {
       validProjects.push(project);

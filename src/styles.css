@@ -2,6 +2,7 @@
 :root {
   /* Default Light Mode */
   --primary-color: #3b82f6;
+  --primary-rgb: 59, 130, 246;
   --bg-color: #f3f4f6;
   --card-bg: #ffffff;
   --text-main: #1f2937;
@@ -58,8 +59,14 @@
   --github-text: #ffffff;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  overflow-x: hidden;
+  width: 100%;
   font-family:
     'Inter',
     -apple-system,
