@@ -30,9 +30,29 @@
       "highlights": ["Next.js", "PostgreSQL", "Prisma", "Docker", "Kubernetes"],
       "tools": {
         "languages": ["TypeScript", "GraphQL", "Rust", "Go", "Python", "Bash"],
-        "frameworks": ["Next.js", "Prisma", "Express", "FastAPI", "Apollo Server", "Redux Toolkit", "Framer Motion", "Jest", "Cypress"],
+        "frameworks": [
+          "Next.js",
+          "Prisma",
+          "Express",
+          "FastAPI",
+          "Apollo Server",
+          "Redux Toolkit",
+          "Framer Motion",
+          "Jest",
+          "Cypress"
+        ],
         "databases": ["PostgreSQL", "Redis", "Elasticsearch", "MongoDB", "Neo4j"],
-        "infrastructure": ["Docker", "Kubernetes", "AWS (EC2, S3, RDS)", "Vercel", "GitHub Actions", "Terraform", "Nginx", "Prometheus", "Grafana"]
+        "infrastructure": [
+          "Docker",
+          "Kubernetes",
+          "AWS (EC2, S3, RDS)",
+          "Vercel",
+          "GitHub Actions",
+          "Terraform",
+          "Nginx",
+          "Prometheus",
+          "Grafana"
+        ]
       },
       "description": "A specialized social network for software engineers to share code snippets, collaborate on side projects, and discover job opportunities. Includes a custom-built real-time chat system and an integrated IDE-like code editor for collaborative debugging.",
       "featured": true,

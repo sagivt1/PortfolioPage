@@ -48,10 +48,11 @@ try {
 
     const hasFeatured = project.featured !== undefined && project.featured !== null;
     const hasHighlights = Array.isArray(project.highlights);
-    
+
     const tools = project.tools;
-    const hasTools = tools && 
-      typeof tools === 'object' && 
+    const hasTools =
+      tools &&
+      typeof tools === 'object' &&
       !Array.isArray(tools) &&
       Array.isArray(tools.languages) &&
       Array.isArray(tools.frameworks) &&

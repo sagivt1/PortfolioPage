@@ -72,7 +72,6 @@
                 </svg>
               </a>
             </div>
-
           </div>
         </div>
       </header>
@@ -240,16 +239,14 @@
   <div class="modal-overlay" (click)="closeModal()">
     <div class="modal-content" (click)="$event.stopPropagation()">
       <button class="modal-close" (click)="closeModal()" aria-label="Close modal">×</button>
-      
+
       <button class="modal-nav prev" (click)="prevImage($event)" aria-label="Previous image">
         ‹
       </button>
-      
+
       <img [src]="image" alt="Screenshot preview" class="modal-image" />
-      
-      <button class="modal-nav next" (click)="nextImage($event)" aria-label="Next image">
-        ›
-      </button>
+
+      <button class="modal-nav next" (click)="nextImage($event)" aria-label="Next image">›</button>
     </div>
   </div>
 }

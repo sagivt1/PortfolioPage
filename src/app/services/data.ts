@@ -81,25 +81,26 @@ export class DataService {
           const value = project[field];
           return typeof value === 'string' && value.trim() !== '';
         });
-const hasFeatured = project.featured !== undefined && project.featured !== null;
+        const hasFeatured = project.featured !== undefined && project.featured !== null;
 
-const hasHighlights = Array.isArray(project.highlights);
+        const hasHighlights = Array.isArray(project.highlights);
 
-const tools = project.tools;
-const hasTools = tools && 
-  typeof tools === 'object' && 
-  !Array.isArray(tools) &&
-  Array.isArray(tools.languages) &&
-  Array.isArray(tools.frameworks) &&
-  Array.isArray(tools.databases) &&
-  Array.isArray(tools.infrastructure);
+        const tools = project.tools;
+        const hasTools =
+          tools &&
+          typeof tools === 'object' &&
+          !Array.isArray(tools) &&
+          Array.isArray(tools.languages) &&
+          Array.isArray(tools.frameworks) &&
+          Array.isArray(tools.databases) &&
+          Array.isArray(tools.infrastructure);
 
-if (!hasRequiredStrings || !hasFeatured || !hasTools || !hasHighlights) {
-  console.warn(
-    `Project at index ${index} ("${project.projectName || 'Unknown'}") was skipped due to missing required fields (strings, featured status, tools, or highlights).`,
-  );
-  return false;
-}
+        if (!hasRequiredStrings || !hasFeatured || !hasTools || !hasHighlights) {
+          console.warn(
+            `Project at index ${index} ("${project.projectName || 'Unknown'}") was skipped due to missing required fields (strings, featured status, tools, or highlights).`,
+          );
+          return false;
+        }
 
         return true;
       });

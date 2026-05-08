@@ -157,9 +157,15 @@
 }
 
 @keyframes cta-pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.02); } /* Reduced from 1.05 to prevent overflow */
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  } /* Reduced from 1.05 to prevent overflow */
+  100% {
+    transform: scale(1);
+  }
 }
 
 .social-link.linkedin {
@@ -550,25 +556,39 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scaleIn {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1024px) {
-  .modal-nav.prev { left: -70px; }
-  .modal-nav.next { right: -70px; }
+  .modal-nav.prev {
+    left: -70px;
+  }
+  .modal-nav.next {
+    right: -70px;
+  }
 }
 
 @media (max-width: 768px) {
   .modal-content {
     max-width: 95vw;
   }
-  
+
   .modal-close {
     top: -50px;
     right: 0;
@@ -581,8 +601,12 @@
     background: rgba(0, 0, 0, 0.5);
   }
 
-  .modal-nav.prev { left: 10px; }
-  .modal-nav.next { right: 10px; }
+  .modal-nav.prev {
+    left: 10px;
+  }
+  .modal-nav.next {
+    right: 10px;
+  }
 }
 
 .project-thumbnails {
@@ -607,7 +631,7 @@
 .active-thumbnail {
   border-color: var(--primary-color);
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .project-thumbnail {
@@ -762,7 +786,7 @@
   .card-content {
     padding: 1.25rem;
     border-radius: 24px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     width: 100%;
   }
 
@@ -864,14 +888,19 @@
 
 /* Extra tight for very small screens */
 @media (max-width: 400px) {
-  .project-card h3 { font-size: 1.5rem; }
-  .card-content { padding: 1.1rem; }
-  .hero-text h1 { font-size: 1.35rem; }
-  .social-link { height: 40px; }
-  .subtitle { font-size: 0.8rem; }
-}
-
- padding: 0 1rem;
+  .project-card h3 {
+    font-size: 1.5rem;
+  }
+  .card-content {
+    padding: 1.1rem;
+  }
+  .hero-text h1 {
+    font-size: 1.35rem;
+  }
+  .social-link {
+    height: 40px;
+  }
+  .subtitle {
+    font-size: 0.8rem;
   }
 }
-
