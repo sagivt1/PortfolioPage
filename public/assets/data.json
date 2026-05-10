@@ -79,6 +79,34 @@
       "photos": ["assets/screenshot/MarketTracker01.png", "assets/screenshot/MarketTracker02.png"],
       "githubLink": "https://github.com/sagivt1/Crypto-Market-Tracker",
       "liveLink": ""
+    },
+    {
+      "projectName": "NeuralSearch",
+      "role": "Backend Developer",
+      "description": "A high-performance semantic search engine that utilizes vector embeddings to find documents based on natural language queries. It features a FastAPI backend, pgvector-powered PostgreSQL database, and an interactive Streamlit UI for seamless document ingestion and search.",
+      "highlights": ["Python", "FastAPI", "PostgreSQL", "pgvector", "Docker"],
+      "tools": {
+        "languages": ["Python"],
+        "frameworks": [
+          "FastAPI",
+          "Streamlit",
+          "Sentence Transformers",
+          "SQLModel",
+          "SQLAlchemy",
+          "Celery",
+          "Pydantic"
+        ],
+        "databases": ["PostgreSQL", "pgvector", "Redis"],
+        "infrastructure": ["Docker", "Docker Compose", "GitHub", "uv"]
+      },
+      "featured": true,
+      "photos": [
+        "assets/screenshot/NeuralSearch01.png",
+        "assets/screenshot/NeuralSearch02.png",
+        "assets/screenshot/NeuralSearch03.png"
+      ],
+      "githubLink": "https://github.com/sagivt1/NeuralSearch",
+      "liveLink": ""
     }
   ]
 }
