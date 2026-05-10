@@ -29,9 +29,17 @@
           <div class="hero-text">
             <h1>{{ data.personalInfo.fullName }}</h1>
             <p class="subtitle">{{ data.personalInfo.title }}</p>
-            <p class="email">
-              <a [href]="'mailto:' + data.personalInfo.email">{{ data.personalInfo.email }}</a>
-            </p>
+            <div class="email-container">
+              <button
+                class="email-btn"
+                (click)="copyEmail(data.personalInfo.email)"
+                [class.copied]="emailCopied()"
+                aria-label="Copy email address"
+              >
+                {{ data.personalInfo.email }}
+              </button>
+              <span class="copy-toast" [class.show]="emailCopied()">Copied!</span>
+            </div>
             <div class="social-links-hero">
               <a
                 [href]="data.personalInfo.linkedin"

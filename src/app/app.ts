@@ -20,6 +20,21 @@ export class App implements OnInit, OnDestroy {
   modalImage = signal<string | null>(null);
   currentModalProject = signal<string | null>(null);
   error = signal<string | null>(null);
+  emailCopied = signal<boolean>(false);
+
+  copyEmail(email: string) {
+    navigator.clipboard
+      .writeText(email)
+      .then(() => {
+        this.emailCopied.set(true);
+        setTimeout(() => {
+          this.emailCopied.set(false);
+        }, 2000);
+      })
+      .catch((err) => {
+        console.error('Failed to copy email: ', err);
+      });
+  }
 
   @HostListener('window:keydown', ['$event'])
   handleKeyDown(event: KeyboardEvent) {

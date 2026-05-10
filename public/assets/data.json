@@ -1,116 +1,83 @@
 {
   "personalInfo": {
-    "fullName": "Test User",
-    "email": "test@example.com",
-    "title": "Full Stack Developer | Cloud Architect | Open Source Contributor",
+    "fullName": "Sagiv Talker",
+    "email": "sagiv.talker@gmail.com",
+    "title": "Software Developer | Python & C++ | M.Sc. Computer Science (in progress)",
     "picture": "assets/profile.png",
-    "linkedin": "https://linkedin.com/in/testuser",
-    "github": "https://github.com/testuser"
+    "linkedin": "https://www.linkedin.com/in/sagiv-talker/",
+    "github": "https://github.com/sagivt1"
   },
   "projects": [
     {
-      "projectName": "EcoTrack",
-      "role": "Lead Full Stack Developer",
-      "highlights": ["React", "Firebase"],
+      "projectName": "CineMatch",
+      "role": "Python Backend Developer/DevOps",
+      "description": "CineMatch is a modern movie discovery and review platform that bridges the gap between raw data and AI-driven insights. It allows users to browse movies using integrated TMDB data, submit detailed reviews, and interact with specialized AI services for natural language recommendations and review summaries.",
+      "highlights": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "CI/CD",
+        "OpenAI",
+        "Cloudflare DNS",
+        "Cloudflare R2",
+        "GitHub Actions",
+        "Docker",
+        "Docker Compose"
+      ],
       "tools": {
-        "languages": ["JavaScript", "CSS"],
-        "frameworks": ["React", "TailwindCSS", "Chart.js"],
-        "databases": ["Firebase"],
-        "infrastructure": ["Firebase Hosting"]
-      },
-      "description": "A comprehensive sustainability platform that helps users monitor and reduce their carbon footprint. It features real-time data visualization of energy consumption, automated lifestyle tips powered by AI, and a community-driven marketplace for eco-friendly products.",
-      "featured": true,
-      "photos": ["assets/screenshot/EcoTrack01.png"],
-      "githubLink": "https://github.com/testuser/ecotrack",
-      "liveLink": "https://ecotrack-demo.com"
-    },
-    {
-      "projectName": "DevConnect",
-      "role": "Lead Architect & Backend Developer",
-      "highlights": ["Next.js", "PostgreSQL", "Prisma", "Docker", "Kubernetes"],
-      "tools": {
-        "languages": ["TypeScript", "GraphQL", "Rust", "Go", "Python", "Bash"],
+        "languages": ["Python", "TypeScript", "HTML", "CSS", "SQL"],
         "frameworks": [
-          "Next.js",
-          "Prisma",
-          "Express",
           "FastAPI",
-          "Apollo Server",
-          "Redux Toolkit",
-          "Framer Motion",
-          "Jest",
-          "Cypress"
+          "Node.js",
+          "Express",
+          "Angular",
+          "Prisma",
+          "SQLAlchemy",
+          "Alembic",
+          "TMDB API",
+          "OpenAI"
         ],
-        "databases": ["PostgreSQL", "Redis", "Elasticsearch", "MongoDB", "Neo4j"],
+        "databases": ["PostgreSQL", "AWS S3 Bucket"],
         "infrastructure": [
-          "Docker",
-          "Kubernetes",
-          "AWS (EC2, S3, RDS)",
-          "Vercel",
+          "Neon",
+          "DigitalOcean",
+          "Cloudflare R2",
+          "Cloudflare DNS",
           "GitHub Actions",
-          "Terraform",
+          "CI/CD",
+          "CloudAMQP",
+          "RabbitMQ",
+          "Docker",
+          "Docker Compose",
+          "Kubernetes",
           "Nginx",
-          "Prometheus",
-          "Grafana"
+          "MinIO"
         ]
       },
-      "description": "A specialized social network for software engineers to share code snippets, collaborate on side projects, and discover job opportunities. Includes a custom-built real-time chat system and an integrated IDE-like code editor for collaborative debugging.",
-      "featured": true,
-      "photos": ["assets/screenshot/DevConnect01.png", "assets/screenshot/DevConnect02.png"],
-      "githubLink": "https://github.com/testuser/devconnect",
-      "liveLink": "https://dev-connect.io"
-    },
-    {
-      "projectName": "ByteSized",
-      "role": "Full Stack Developer",
-      "highlights": ["Vue.js", "MongoDB"],
-      "tools": {
-        "languages": ["JavaScript"],
-        "frameworks": ["Vue.js", "Express.js"],
-        "databases": ["MongoDB", "Redis"],
-        "infrastructure": ["Nginx"]
-      },
-      "description": "An intelligent meal planning and recipe management application. ByteSized uses machine learning to suggest recipes based on your dietary preferences and available pantry items, effectively reducing food waste and simplifying grocery shopping.",
       "featured": true,
       "photos": [
-        "assets/screenshot/ByteSized01.png",
-        "assets/screenshot/ByteSized02.png",
-        "assets/screenshot/ByteSized03.png",
-        "assets/screenshot/ByteSized04.png"
+        "assets/screenshot/CineMatch01.png",
+        "assets/screenshot/CineMatch02.png",
+        "assets/screenshot/CineMatch03.png",
+        "assets/screenshot/CineMatch04.png"
       ],
-      "githubLink": "https://github.com/testuser/bytesized",
-      "liveLink": ""
+      "githubLink": "https://github.com/sagivt1/CineMatch",
+      "liveLink": "https://www.cinematch.dev/"
     },
     {
-      "projectName": "PeakPulse",
-      "role": "Lead Developer",
-      "highlights": ["Python", "Django", "D3.js"],
+      "projectName": "Crypto-Market-Tracker",
+      "role": "C++ Developer",
+      "description": "A C++ desktop application for tracking and visualizing cryptocurrency market data in real-time. It features interactive data plots for market analysis and a responsive GUI built with Dear ImGui and SFML.",
+      "highlights": ["C++", "Dear ImGui", "CMake", "Conan"],
       "tools": {
-        "languages": ["Python", "JavaScript"],
-        "frameworks": ["Django", "D3.js"],
-        "databases": ["PostgreSQL"],
-        "infrastructure": ["Docker"]
+        "languages": ["C++"],
+        "frameworks": ["Dear ImGui", "SFML", "ImPlot", "CPR", "nlohmann/json", "GoogleTest"],
+        "databases": ["JSON"],
+        "infrastructure": ["GitHub", "CMake", "Conan"]
       },
-      "description": "A performance-focused fitness dashboard for professional athletes. It integrates with wearable IoT devices to track biometric data in real-time, providing advanced analytics on recovery times, heart rate variability, and peak performance windows.",
-      "featured": false,
-      "photos": ["assets/screenshot/PeakPulse01.png"],
-      "githubLink": "https://github.com/testuser/peakpulse",
-      "liveLink": ""
-    },
-    {
-      "projectName": "SecureVault",
-      "role": "Security Researcher",
-      "highlights": ["Go", "Rust"],
-      "tools": {
-        "languages": ["Go", "Rust", "WebAssembly"],
-        "frameworks": [],
-        "databases": ["SQLite"],
-        "infrastructure": []
-      },
-      "description": "A zero-knowledge password manager and file encryption tool. Built with a focus on maximum security and cross-platform compatibility, it utilizes military-grade AES-256 encryption and biometric authentication to keep your sensitive data safe.",
-      "featured": false,
-      "photos": ["assets/screenshot/SecureVault01.png"],
-      "githubLink": "https://github.com/testuser/securevault",
+      "featured": true,
+      "photos": ["assets/screenshot/MarketTracker01.png", "assets/screenshot/MarketTracker02.png"],
+      "githubLink": "https://github.com/sagivt1/Crypto-Market-Tracker",
       "liveLink": ""
     }
   ]
