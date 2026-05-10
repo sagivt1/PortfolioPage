@@ -10,9 +10,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "vitest run",
     "test:watch": "vitest",
-    "lint": "prettier --check .",
-    "deploy": "npm run build && wrangler deploy",
-    "preview": "npm run build && wrangler dev"
+    "lint": "prettier --check ."
   },
   "private": true,
   "dependencies": {
@@ -36,7 +34,6 @@
     "jsdom": "^28.1.0",
     "prettier": "^3.8.1",
     "typescript": "~5.9.2",
-    "vitest": "^4.0.8",
-    "wrangler": "^4.90.0"
+    "vitest": "^4.0.8"
   }
 }
