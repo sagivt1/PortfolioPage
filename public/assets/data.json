@@ -89,7 +89,15 @@
       "projectName": "NeuralSearch",
       "role": "Backend Developer",
       "description": "A high-performance semantic search engine that utilizes vector embeddings to find documents based on natural language queries. It features a FastAPI backend, pgvector-powered PostgreSQL database, and an interactive Streamlit UI for seamless document ingestion and search.",
-      "highlights": ["Python", "FastAPI", "PostgreSQL", "pgvector", "Docker"],
+      "highlights": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL",
+        "pgvector",
+        "Docker",
+        "SQLAlchemy",
+        "Pydantic"
+      ],
       "tools": {
         "languages": ["Python"],
         "frameworks": [
