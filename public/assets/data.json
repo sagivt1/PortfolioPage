@@ -22,7 +22,11 @@
         "Cloudflare R2",
         "GitHub Actions",
         "Docker",
-        "Docker Compose"
+        "Docker Compose",
+        "SQL",
+        "SQLAlchemy",
+        "Alembic",
+        "TMDB API"
       ],
       "tools": {
         "languages": ["Python", "TypeScript", "HTML", "CSS", "SQL"],
