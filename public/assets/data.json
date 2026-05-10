@@ -19,14 +19,15 @@
         "CI/CD",
         "OpenAI",
         "Cloudflare DNS",
-        "Cloudflare R2",
+        "AWS S3 Bucket",
         "GitHub Actions",
         "Docker",
         "Docker Compose",
         "SQL",
         "SQLAlchemy",
         "Alembic",
-        "TMDB API"
+        "TMDB API",
+        "RabbitMQ"
       ],
       "tools": {
         "languages": ["Python", "TypeScript", "HTML", "CSS", "SQL"],
