@@ -140,11 +140,12 @@ This project is highly optimized for [Cloudflare Pages](https://pages.cloudflare
 2. Log in to the [Cloudflare Dashboard](https://dash.cloudflare.com/).
 3. Navigate to **Workers & Pages** > **Create application** > **Pages** > **Connect to Git**.
 4. Select your `PortfolioPage` repository.
-5. Use these exact **Build settings**:
+5. **Important:** On the next screen, change the **Project Name** to your own name (e.g., `sagivtalker`). This ensures your live URL is professional (e.g., `https://sagivtalker.pages.dev/`) instead of a random or generic one.
+6. Use these exact **Build settings**:
    - **Framework preset:** `Angular`
    - **Build command:** `npm run build`
    - **Build output directory:** `dist/PortfolioPage/browser`
-6. Click **Save and Deploy**.
+7. Click **Save and Deploy**.
 
 _Note: The project includes a `public/_redirects` file to ensure client-side routing works flawlessly on Cloudflare._
 
